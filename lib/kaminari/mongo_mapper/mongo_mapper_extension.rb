@@ -1,4 +1,4 @@
-require 'kaminari/models/plucky_criteria_methods'
+require 'kaminari/mongo_mapper/plucky_criteria_methods'
 
 module Kaminari
   module MongoMapperExtension
