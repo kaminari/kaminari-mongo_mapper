@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'kaminari'
   spec.add_development_dependency 'mongo_mapper'
   spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'capybara'
 end
