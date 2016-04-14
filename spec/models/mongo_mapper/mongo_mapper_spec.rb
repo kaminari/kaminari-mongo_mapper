@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Kaminari::MongoMapperExtension do
+describe Kaminari::MongoMapper::MongoMapperExtension do
   before do
     begin
       MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
