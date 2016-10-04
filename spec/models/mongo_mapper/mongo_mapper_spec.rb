@@ -25,7 +25,7 @@ describe Kaminari::MongoMapper::MongoMapperExtension do
       it { should be_a Plucky::Query }
       its(:current_page) { should == 1 }
       its(:limit_value) { should == 25 }
-      its(:num_pages) { should == 2 }
+      its(:total_pages) { should == 2 }
       it { should skip(0) }
     end
 
@@ -34,7 +34,7 @@ describe Kaminari::MongoMapper::MongoMapperExtension do
       it { should be_a Plucky::Query }
       its(:current_page) { should == 2 }
       its(:limit_value) { should == 25 }
-      its(:num_pages) { should == 2 }
+      its(:total_pages) { should == 2 }
       it { should skip 25 }
     end
 
@@ -43,7 +43,7 @@ describe Kaminari::MongoMapper::MongoMapperExtension do
       it { should be_a Plucky::Query }
       its(:current_page) { should == 1 }
       its(:limit_value) { should == 25 }
-      its(:num_pages) { should == 2 }
+      its(:total_pages) { should == 2 }
       it { should skip 0 }
     end
 
@@ -55,7 +55,7 @@ describe Kaminari::MongoMapper::MongoMapperExtension do
       subject { MongoMapperExtensionDeveloper.where(:salary => 1).page 2 }
       its(:current_page) { should == 2 }
       its(:limit_value) { should == 25 }
-      its(:num_pages) { should == 2 }
+      its(:total_pages) { should == 2 }
       it { should skip 25 }
     end
 
@@ -67,7 +67,7 @@ describe Kaminari::MongoMapper::MongoMapperExtension do
       subject { MongoMapperExtensionDeveloper.page(2).where(:salary => 1) }
       its(:current_page) { should == 2 }
       its(:limit_value) { should == 25 }
-      its(:num_pages) { should == 2 }
+      its(:total_pages) { should == 2 }
       it { should skip 25 }
     end
   end
@@ -77,7 +77,7 @@ describe Kaminari::MongoMapper::MongoMapperExtension do
     it { should be_a Plucky::Query }
     its(:current_page) { should == 2 }
     its(:limit_value) { should == 10 }
-    its(:num_pages) { should == 5 }
+    its(:total_pages) { should == 5 }
     it { should skip 10 }
   end
 end
