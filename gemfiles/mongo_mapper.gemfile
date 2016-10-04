@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 #FIXME bundle GH master for now
 gem 'kaminari-core', github: 'amatsuda/kaminari'
+gem 'kaminari-actionview', github: 'amatsuda/kaminari'
 
 gem 'railties', '~> 4.2.0'
 gem 'bson'
