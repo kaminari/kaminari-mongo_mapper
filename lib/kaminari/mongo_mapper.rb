@@ -1,5 +1,5 @@
 require "kaminari/mongo_mapper/version"
-require 'kaminari'
+require 'kaminari/core'
 require 'mongo_mapper'
 
 require 'kaminari/mongo_mapper/mongo_mapper_extension'
