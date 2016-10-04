@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 #FIXME bundle GH master for now
 gem 'kaminari-core', github: 'amatsuda/kaminari'
 
-gem 'railties', '>= 3.2.3'
+gem 'railties', '~> 4.2.0'
 gem 'bson'
 gem 'mongo_mapper', '>= 0.11.0'
 gem 'rspec-rails', '~> 2.14.1'
