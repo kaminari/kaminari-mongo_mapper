@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'kaminari/mongo_mapper/plucky_criteria_methods'
 
 module Kaminari

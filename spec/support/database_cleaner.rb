@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 DatabaseCleaner[:mongo_mapper].strategy = :truncation
 
 RSpec.configure do |config|

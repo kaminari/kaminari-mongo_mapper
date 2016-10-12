@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class User
   include ::MongoMapper::Document
   key :name, String
