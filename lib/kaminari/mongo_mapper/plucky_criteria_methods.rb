@@ -6,8 +6,8 @@ module Kaminari
 
       delegate :default_per_page, :max_per_page, :max_pages, :to => :model
 
-      def entry_name
-        model.model_name.human.downcase
+      def entry_name(options = {}) #:nodoc:
+        model_name.human(options.reverse_merge(default: model_name.human.pluralize(options[:count])))
       end
 
       def limit_value #:nodoc:
