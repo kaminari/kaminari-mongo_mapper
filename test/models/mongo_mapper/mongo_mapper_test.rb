@@ -17,7 +17,7 @@ class MongoMapperExtensionTest < ActiveSupport::TestCase
 
   setup do
     MongoMapperExtensionDeveloper.destroy_all
-    41.times { MongoMapperExtensionDeveloper.create!({:salary => 1}) }
+    41.times { MongoMapperExtensionDeveloper.create!({salary: 1}) }
   end
 
   sub_test_case '#page' do
@@ -53,9 +53,9 @@ class MongoMapperExtensionTest < ActiveSupport::TestCase
 
     test 'with criteria before' do
       # should have the proper criteria source
-      assert_equal({:salary => 1}, MongoMapperExtensionDeveloper.where(:salary => 1).page(2).criteria.source)
+      assert_equal({salary: 1}, MongoMapperExtensionDeveloper.where(salary: 1).page(2).criteria.source)
 
-      developers = MongoMapperExtensionDeveloper.where(:salary => 1).page 2
+      developers = MongoMapperExtensionDeveloper.where(salary: 1).page 2
 
       assert_equal 2, developers.current_page
       assert_equal 25, developers.limit_value
@@ -65,9 +65,9 @@ class MongoMapperExtensionTest < ActiveSupport::TestCase
 
     test 'with criteria after' do
       # should have the proper criteria source
-      assert_equal({:salary => 1}, MongoMapperExtensionDeveloper.where(:salary => 1).page(2).criteria.source)
+      assert_equal({salary: 1}, MongoMapperExtensionDeveloper.where(salary: 1).page(2).criteria.source)
 
-      developers = MongoMapperExtensionDeveloper.page(2).where(:salary => 1)
+      developers = MongoMapperExtensionDeveloper.page(2).where(salary: 1)
 
       assert_equal 2, developers.current_page
       assert_equal 25, developers.limit_value
