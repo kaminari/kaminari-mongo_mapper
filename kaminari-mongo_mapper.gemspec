@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ronnie@dio.jp"]
 
   spec.summary       = 'Kaminari MongoMapper adapter'
-  spec.description   = 'Kaminari MongoMapper adapter'
+  spec.description   = 'kaminari-mongo_mapper lets your MongoMapper models be paginatable'
   spec.homepage      = 'https://github.com/kaminari/kaminari-mongo_mapper'
   spec.license       = "MIT"
 
