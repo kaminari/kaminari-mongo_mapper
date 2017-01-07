@@ -7,7 +7,7 @@ if RUBY_VERSION > '2.2.2'
   gem 'railties', '>= 5.0.0'
   gem 'activemodel-serializers-xml'
 else
-  gem 'railties', '>= 4.2.0'
+  gem 'railties', '~> 4.2.0'
 end
 gem 'bson'
 gem 'mongo_mapper', '>= 0.11.0'
