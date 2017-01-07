@@ -5,8 +5,8 @@ gem 'kaminari-actionview', github: 'amatsuda/kaminari'
 
 if RUBY_VERSION > '2.2.2'
   gem 'railties', '>= 5.0.0'
-  # FIXME bundle forked one until https://github.com/rails/activemodel-serializers-xml/pull/13 is merged
-  gem 'activemodel-serializers-xml', github: 'amatsuda/activemodel-serializers-xml', branch: 'dont_require_ar'
+  # FIXME bundle GH master until new version (> 1.0.1) is released
+  gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
 else
   gem 'railties', '~> 4.2.0'
 end
