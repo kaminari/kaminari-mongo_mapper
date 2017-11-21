@@ -5,12 +5,12 @@ before_install: gem update bundler
 rvm:
   - 2.0.0
   - 2.1.10
-  - 2.2.7
-  - 2.3.4
-  - 2.4.1
+  - 2.2.8
+  - 2.3.5
+  - 2.4.2
   - ruby-head
-  - jruby-9.1.9.0
-  - rbx-2
+  - jruby-9.1.14.0
+  - rbx-3
 
 gemfile:
   - gemfiles/mongo_mapper.gemfile
@@ -26,6 +26,6 @@ cache: bundler
 matrix:
   allow_failures:
     - rvm: ruby-head
-    - rvm: jruby-9.1.9.0
-    - rvm: rbx-2
+    - rvm: jruby-9.1.14.0
+    - rvm: rbx-3
   fast_finish: true
